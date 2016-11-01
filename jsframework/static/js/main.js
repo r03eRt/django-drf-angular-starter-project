@@ -9,6 +9,11 @@ app.config(function($stateProvider, $urlRouterProvider){
 			url: '/',
 			templateUrl: '/static/templates/home.html',
 			controller: 'MainCtrl'
+		})
+		.state('page2', {
+			url: '/page2',
+			templateUrl: '/static/templates/page2.html',
+			controller: 'Page2Ctrl'
 		});
 
 	$urlRouterProvider.otherwise('/');
@@ -16,4 +21,8 @@ app.config(function($stateProvider, $urlRouterProvider){
 
 app.controller('MainCtrl', function($scope){
 	$scope.test = "I come from the angularz";
+});
+
+app.controller('Page2Ctrl', function($scope){
+	$scope.test = "I come from the 2";
 });
